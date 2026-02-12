@@ -71,25 +71,99 @@ The database includes the following core tables:
 
 ---
 
-## 📊 Key Insights
+## 🏁 Analysis Phases
 
-- Top 5 drivers contributed X% of total revenue.  
-- Route A → B generated the highest margin.  
-- Average fuel efficiency was X MPG.  
-- Trucks older than X years showed higher maintenance cost per mile.  
-- Overall on-time delivery rate was X%.  
-- Customer X contributed the highest revenue share.  
+### **Phase 1 – Database Creation**
+- Created all tables based on CSV files  
+- Defined proper data types (corrected BOOLEAN/text issues after import)  
+- Set primary and foreign key relationships in design  
 
-*(Update with actual findings after query execution.)*
+### **Phase 2 – Data Understanding & Validation**
+- Reviewed column definitions and data types  
+- Identified missing values in critical fields (trip times, delivery outcomes)  
+- Validated relationships across tables using keys (driver_id, truck_id, route_id)  
+- **Deliverables:** Data dictionary, SQL queries for nulls/duplicates, data quality notes  
+
+### **Phase 3 – Foundational Analysis**
+- Total trucks: 120, trailers: 180, drivers: 150, customers: 200  
+- Count of completed trips: 1,646  
+- Delivery outcomes (on-time vs delayed): 918 / 734  
+- Total revenue from loads: 347,404.64  
+- **Deliverables:** SQL queries + one-two sentence interpretations per metric  
+
+### **Phase 4 – Driver & Performance Analysis**
+- Top drivers by completed trips  
+- Monthly driver performance metrics  
+- Safety incidents count by driver  
+- Average delivery time per driver  
+- **Deliverables:** SQL queries + tables + brief insights  
+
+### **Phase 5 – Vehicle Maintenance Analysis**
+- Maintenance events count by truck/trailer  
+- Average downtime per maintenance type  
+- Fuel purchase patterns by truck  
+- Truck utilization rates across facilities  
+- **Deliverables:** SQL queries + tables + insights on fleet performance  
+
+### **Phase 6 – Route Analysis**
+- Delivery outcomes by route (on-time vs delayed)  
+- Average distance & duration per route (via load → route join)  
+- Most frequent routes by load count  
+- **Deliverables:** SQL queries + tables + interpretation  
+
+### **Phase 7 – Multi-Table Analytical Queries**
+- Join trips, delivery events, and loads for integrated insights  
+- Combine customer locations with route performance (origin_city/state from routes)  
+- Analyze delivery performance by customer segment  
+- **Deliverables:** SQL queries + integrated tables + insights  
+
+### **Phase 8 – Window Function Application**
+- Rank drivers by delivery success rate  
+- Rank trucks by utilization  
+- Compare monthly performance trends (cumulative trips, moving averages)  
+- **Deliverables:** SQL queries + tables + insights  
+
+### **Phase 9 – Conditional Logic & Operational Classification**
+- Categorize deliveries by timeliness: On Schedule / Slight Delay / Major Delay  
+- Classify truck utilization: High / Medium / Low  
+- Tag drivers by safety incident rate: Low / Medium / High Risk  
+- **Deliverables:** SQL queries using CASE + tables showing categories  
+
+### **Phase 10 – Reporting & Business Insights**
+- Top 10 drivers by on-time delivery performance  
+- Trucks with highest maintenance downtime  
+- Routes with best and worst delivery services  
+- Impact of driver performance on customer satisfaction  
+- **Deliverables:** Final reporting queries, clean output for dashboards, written insights  
+
+---
+
+## 🛠 SQL Techniques Used
+- SELECT statements  
+- WHERE filtering  
+- GROUP BY & HAVING  
+- INNER JOIN & multiple table joins  
+- Aggregate functions: SUM, COUNT, AVG  
+- CASE statements for classification  
+- Subqueries & nested queries  
+- Window functions: RANK, DENSE_RANK, moving averages  
+- Date grouping and formatting  
+
+---
+
+## 📊 Key Insights (Example)
+- Top 5 drivers contributed X% of total revenue  
+- Certain routes consistently have higher on-time rates  
+- Older trucks show higher maintenance cost per mile  
+- High-value customers experience higher service reliability  
 
 ---
 
 ## 🚀 Tools Used
-
 - MySQL Workbench  
 - SQL  
-- CSV data files  
-- GitHub for documentation  
+- CSV files for raw data  
+- GitHub for version control & documentation  
 
 ---
 
