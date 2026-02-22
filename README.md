@@ -77,19 +77,26 @@ The database includes the following core tables:
 - Created all tables based on CSV files  
 - Defined proper data types (corrected BOOLEAN/text issues after import)  
 - Set primary and foreign key relationships in design  
+/Images/Phase 1_Database creation and tables.png
+
 
 ### **Phase 2 – Data Understanding & Validation**
 - Reviewed column definitions and data types  
 - Identified missing values in critical fields (trip times, delivery outcomes)  
 - Validated relationships across tables using keys (driver_id, truck_id, route_id)  
 - **Deliverables:** Data dictionary, SQL queries for nulls/duplicates, data quality notes  
+/Images/Phase 2_Sample View_columns from customers.png
+/Images/Phase 2_Sample-Review column definitions and data types.png
+
 
 ### **Phase 3 – Foundational Analysis**
 - Total trucks: 120, trailers: 180, drivers: 150, customers: 200  
 - Count of completed trips: 1,646  
 - Delivery outcomes (on-time vs delayed): 918 / 734  
 - Total revenue from loads: 347,404.64  
-- **Deliverables:** SQL queries + one-two sentence interpretations per metric  
+- **Deliverables:** SQL queries + one-two sentence interpretations per metric
+/Images/Phase 3_ Sample of Foundational Analysis.png
+  
 
 ### **Phase 4 – Driver & Performance Analysis**
 - Top drivers by completed trips  
@@ -97,37 +104,48 @@ The database includes the following core tables:
 - Safety incidents count by driver  
 - Average delivery time per driver  
 - **Deliverables:** SQL queries + tables + brief insights  
+/Images/Phase 4 sample_Top 5 drivers by number of completed trips.png
+/Images/Phase 4 sample_Monthly performance metrics across drivers.png
+
 
 ### **Phase 5 – Vehicle Maintenance Analysis**
 - Maintenance events count by truck/trailer  
 - Average downtime per maintenance type  
 - Fuel purchase patterns by truck  
 - Truck utilization rates across facilities  
-- **Deliverables:** SQL queries + tables + insights on fleet performance  
+- **Deliverables:** SQL queries + tables + insights on fleet performance
+  /Images/Phase 5 sample_Fuel purchase patterns by truck.png
+/Images/Phase 5 sample_Count maintenance events by truck or trailer.png
+ 
 
 ### **Phase 6 – Route Analysis**
 - Delivery outcomes by route (on-time vs delayed)  
 - Average distance & duration per route (via load → route join)  
 - Most frequent routes by load count  
-- **Deliverables:** SQL queries + tables + interpretation  
+- **Deliverables:** SQL queries + tables + interpretation
+  /Images/Phase 6 sample_Delivery outcomes by route (on-time vs delayed).png
 
 ### **Phase 7 – Multi-Table Analytical Queries**
 - Join trips, delivery events, and loads for integrated insights  
 - Combine customer locations with route performance (origin_city/state from routes)  
 - Analyze delivery performance by customer segment  
-- **Deliverables:** SQL queries + integrated tables + insights  
+- **Deliverables:** SQL queries + integrated tables + insights
+  /Images/Phase 7 sample_Multi-Table Analytical Queries.png
 
 ### **Phase 8 – Window Function Application**
 - Rank drivers by delivery success rate  
 - Rank trucks by utilization  
 - Compare monthly performance trends (cumulative trips, moving averages)  
 - **Deliverables:** SQL queries + tables + insights  
+/Images/Phase 8 sample_ Rank drivers by delivery success rate.png
 
 ### **Phase 9 – Conditional Logic & Operational Classification**
 - Categorize deliveries by timeliness: On Schedule / Slight Delay / Major Delay  
 - Classify truck utilization: High / Medium / Low  
 - Tag drivers by safety incident rate: Low / Medium / High Risk  
 - **Deliverables:** SQL queries using CASE + tables showing categories  
+/Images/Phase 9 sample_Conditional Logic and Operational Classification.png
+/Images/Phase 9 sample_Conditional Logic and Operational Classification.png
 
 ### **Phase 10 – Reporting & Business Insights**
 - Top 10 drivers by on-time delivery performance  
@@ -135,6 +153,9 @@ The database includes the following core tables:
 - Routes with best and worst delivery services  
 - Impact of driver performance on customer satisfaction  
 - **Deliverables:** Final reporting queries, clean output for dashboards, written insights  
+/Images/Phase 10. Reporting and Business Insight.png
+/Images/Phase 10_Reporting and Business Insight.png
+
 
 ---
 
